@@ -51,7 +51,16 @@ block content
                         div Total: 
                         div.total
                     div 
-                        button PROCEED TO CHECKOUT
+                        button(class="proceed-to-checkout" data-toggle="modal" data-target="#purchase-modal") PROCEED TO CHECKOUT
+    div#purchase-modal.modal.fade(role='dialog')
+        div.modal-dialog
+            div.modal-content
+                div.modal-body.added-content 
+                    div <i class="fas fa-dragon"></i>
+                    div 
+                        h4 Thank for purchase !
+                div.modal-footer
+                    button.btn.btn-default.purchase-close(type='button' data-dismiss='modal') Close
 
 
 

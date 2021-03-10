@@ -95,4 +95,14 @@ if(update_cart) {
     });
 }
 
+var purchase_close = document.getElementsByClassName("purchase-close")[0];
+
+if(purchase_close) {
+    purchase_close.addEventListener("click", () => {
+        localStorage.setItem("cart", JSON.stringify([]));
+        window.location.reload();
+    });
+}
+
+
 
