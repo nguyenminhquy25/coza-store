@@ -83,10 +83,14 @@ if(update_cart) {
         var table = document.getElementsByClassName("cart-table")[0];
         var new_product_quantity = table.getElementsByClassName("product-quantity");
         var cart = JSON.parse(localStorage.getItem("cart"));
+        var new_cart = [];
         for(let i = 0; i < new_product_quantity.length; i++) {
             cart[i].product_quantity = parseInt(new_product_quantity[i].innerHTML);
+            if(cart[i].product_quantity > 0) {
+                new_cart.push(cart[i]);
+            }
         }
-        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("cart", JSON.stringify(new_cart));
         window.location.reload();
     });
 }
