@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="/css/home.css")
+        link(rel="stylesheet", href="/css/header.css")
+        link(rel="stylesheet", href="/css/footer.css")
+        link(rel="stylesheet", href="/css/product.css")
+        link(rel="stylesheet", href="/css/about.css")
+        link(rel="stylesheet", href="/css/product.css")
+        link(rel="stylesheet", href="/css/contact.css")
+        link(rel="stylesheet", href="/css/shop.css")
+        link(rel="stylesheet", href="/css/shopping-cart.css")
+        link(rel="stylesheet", href="/css/blog.css")
+        link(rel="stylesheet", href="/css/blog-detail.css")
+        link(rel="stylesheet", href="/css/detail.css")
+        link(href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet')
+        script(src='https://kit.fontawesome.com/5962c3e9bc.js' crossorigin='anonymous')
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+        link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Playfair+Display:wght@600&display=swap' rel='stylesheet')
+    body 
+        include ./header.pug
+        block content 
+        include ./footer.pug
+        script(src="/js/home.js")    
+        script(src="/js/product.js") 
+        script(src="/js/shopping-cart.js") 
+        script(src="/js/product-detail.js") 
+        

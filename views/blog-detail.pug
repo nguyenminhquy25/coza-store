@@ -1,0 +1,142 @@
+extends ./partials/common.pug
+block content 
+    ol.breadcrumb.shopping-cart-breadcrumb
+        li.breadcrumb-item
+                a(href='/') Home
+        li.breadcrumb-item
+                a(href='/blog') Blog
+        li.breadcrumb-item.active(aria-current='page')= blog.blog_title
+    div.blog
+        div.blog-left
+            div
+                div.blog-big-image
+                    img(src= blog.blog_image, alt= blog.blog_alt)
+                    div.blog-top-left 
+                        h3= blog.blog_day
+                        p= blog.blog_month_year
+                div.blog-more-information.blog-detail-information
+                    div 
+                        div 
+                            span By 
+                            |Admin 
+                        div StreetStyle, Fashion, Couple 
+                        div 8 Comments
+                h1= blog.blog_title
+                h4.blog-detail-content= blog.blog_content
+                div.blog-detail-tags 
+                    div Tags
+                    div 
+                        button Streetstyle
+                    div 
+                        button Crafts
+                div.comment 
+                    h3 LEAVE A COMMENT
+                    h5 Your email address will not be published. Required fields are marked * 
+                    div.blog-detail-comment
+                        <textarea name="comment", cols="30", rows="10", placeholder="Comment..."></textarea>
+                    div.blog-detail-name 
+                        input(type="text" placeholder="Name *")
+                    div.blog-detail-email 
+                        input(type="text" placeholder="Email *")
+                    div.blog-detail-website
+                        input(type="text" placeholder="Website")
+                    div 
+                        button POST COMMENT
+        div.blog-right  
+            div.blog-search 
+                input(type="text" placeholder="Search")
+                div 
+                    a(href="#") <i class="fas fa-search"></i>
+            div.blog-categories
+                h3 Categories
+                div
+                    a(href="#")  Fashion 
+                div
+                    a(href="#")  Beauty
+                div
+                    a(href="#")  Street Style 
+                div
+                    a(href="#")  Life Style 
+                div
+                    a(href="#")  DIY & Crafts
+            div.blog-featured-product
+                h3 Featured Product
+                div.featured-product-item
+                    div 
+                        a(href="#") 
+                            img(src="/images/product-min-01.jpg", alt="product-min-01")
+                    div  
+                        div 
+                            a(href="#") White Shirt With Pleat Detail Back
+                        div $ 19.00
+                div.featured-product-item
+                    div 
+                        a(href="#")    
+                            img(src="/images/product-min-02.jpg", alt="product-min-02")
+                    div  
+                        div 
+                            a(href="#") Converse All Star Hi Black Canvas 
+                        div $ 39.00
+                div.featured-product-item
+                    div
+                        a(href="#")  
+                            img(src="/images/product-min-03.jpg", alt="product-min-03")
+                    div  
+                        div 
+                            a(href="#") Nixon Porter Leather Watch In Tan 
+                        div $ 17.00     
+            div.blog-archieve 
+                h3 Archieve 
+                div
+                    a(href="#")
+                        div 
+                            div July 2018 
+                            div (9)
+                div
+                    a(href="#")
+                        div 
+                            div June 2018 
+                            div (39)
+                div
+                    a(href="#")
+                        div 
+                            div May 2018 
+                            div (29)  
+                div
+                    a(href="#")
+                        div 
+                            div April 2018 
+                            div (35)
+                div
+                    a(href="#")
+                        div 
+                            div March 2018 
+                            div (22)
+                div
+                    a(href="#")
+                        div 
+                            div February 2018 
+                            div (32)
+                div
+                    a(href="#")
+                        div 
+                            div January 2018 
+                            div (21)
+                div
+                    a(href="#")
+                        div 
+                            div December 2017 
+                            div (26)  
+            div.blog-tags 
+                h3 Tags 
+                div 
+                    div 
+                        a(href="#") Fashion 
+                    div 
+                        a(href="#") Lifestyle 
+                    div 
+                        a(href="#") Denim 
+                    div 
+                        a(href="#") Streetstyle 
+                    div 
+                        a(href="#") Crafts 

@@ -1,0 +1,167 @@
+extends ./partials/common.pug
+block content
+    ol.breadcrumb.shopping-cart-breadcrumb
+        li.breadcrumb-item
+            a(href='/') Home
+        li.breadcrumb-item
+            a(href='/shop/men')= product.category
+        li.breadcrumb-item.active(aria-current='page')= product.product_name
+    div.detail-top
+        div.detail-top-left 
+            img(src= product.product_image, alt= product.product_alt, class="product-detail-img")
+        div.detail-top-right 
+            h3.product-detail-name= product.product_name
+            h4.product-detail-price $ #{product.product_price}
+            p= product.product_description
+            div.top-right-bottom 
+                div 
+                    div Size 
+                    div Color
+                div    
+                    div 
+                        select 
+                            option Choose an option
+                            option Size S 
+                            option Size M 
+                            option Size L 
+                            option Size XL
+                    div 
+                        select
+                            option Choose an option
+                            option Red 
+                            option Blue
+                            option White
+                            option Grey 
+                    div.quantity-div.detail-quantity 
+                        div.change-quantity.sub-quantity -
+                        div.product-quantity.product-detail-quantity 1
+                        div.change-quantity.add-quantity +
+                    div 
+                        button(class="add-to-cart", data-toggle="modal", data-target="#added-modal") ADD TO CART
+                    div.detail-icons 
+                        div 
+                            a(href="#") <i class="fas fa-heart"></i>
+                        div 
+                            a(href="#") <i class="fab fa-facebook-f"></i>
+                        div 
+                            a(href="#") <i class="fab fa-twitter"></i> 
+                        div     
+                            a(href="#") <i class="fab fa-google-plus-g"></i> 
+    div.detail-more-information 
+        ul.nav.nav-tabs.more-information-navbar
+            li.active
+                a(data-toggle='tab' href='#description') Description
+            li
+                a(data-toggle='tab' href='#additional-information') Additional information
+            li
+                a(data-toggle='tab' href='#review') Review(1)
+        div.tab-content.more-information-content
+            div#description.tab-pane.fade.in.active
+                p
+                    | Aenean sit amet gravida nisi. Nam fermentum est felis, quis feugiat nunc fringilla sit amet. Ut in blandit ipsum.
+                    | Quisque luctus dui at ante aliquet, in hendrerit lectus interdum. Morbi elementum sapien rhoncus pretium maximus. 
+                    |Nulla lectus enim, cursus et elementum sed, sodales vitae eros. Ut ex quam, porta consequat interdum in, faucibus
+                    | eu velit. Quisque rhoncus ex ac libero varius molestie. Aenean tempor sit amet orci nec iaculis. Cras sit amet nulla
+                    | libero. Curabitur dignissim, nunc nec laoreet consequat, purus nunc porta lacus, vel efficitur tellus augue in ipsum.
+                    | Cras in arcu sed metus rutrum iaculis. Nulla non tempor erat. Duis in egestas nunc.
+            div#additional-information.tab-pane.fade
+                div 
+                    div 
+                        div Weight
+                        div Dimensions
+                        div Materials
+                        div Color
+                        div Size
+                    div 
+                        div 0.79kg
+                        div 110 x 33 x 100 cm 
+                        div 60% cotton
+                        div Black, Blue, Grey, Green, Red, White
+                        div XL, L, M, S
+            div#review.tab-pane.fade
+                div.review-content 
+                    div 
+                        div 
+                            img(src="/images/avatar-01.jpg", alt="avatar-01")
+                        div     
+                            div 
+                                div Ariana Grande
+                                div <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star">
+                                    |</i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            div Quod autem in homine praestantissimum atque optimum est, id deseruit. Apud ceteros autem philosophos
+                    div 
+                        h4 Add a review
+                        p Your email address will not be published. Required fields are marked *
+                    div 
+                        div Your Rating
+                        div <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            |<i class="far fa-star"></i><i class="far fa-star"></i>
+                    div 
+                        div Your review
+                        div 
+                            textarea(name="", cols="30", rows="10") 
+                    div 
+                        div
+                            div Name
+                            div 
+                                input(type="text")
+                        div 
+                            div Email 
+                            div 
+                                input(type="text")
+                    div 
+                        button SUBMIT
+    div.information-div     
+        div SKU: JAK-01
+        div Categories: Jacket, Men
+    h1.related-title Related Products
+    div.product.related-products 
+        div.product-item
+            div 
+                img(src="/images/product-01.jpg", alt="/images/product-01" class="product-image")
+            div.product-item-information
+                div     
+                    div
+                        a(href="#" class="product-name") Esprit Ruffle Shirt
+                    div.product-price $ 16.64
+                div 
+                    button.product-like <i class="far fa-heart"></i>
+        div.product-item
+            div 
+                img(src="/images/product-02.jpg", alt="/images/product-02" class="product-image")
+            div.product-item-information
+                div     
+                    div
+                        a(href="#" class="product-name") Herschel supply
+                    div.product-price $ 35.31
+                div 
+                    button.product-like <i class="far fa-heart"></i>
+        div.product-item
+            div 
+                img(src="/images/product-03.jpg", alt="/images/product-03" class="product-image")
+            div.product-item-information
+                div     
+                    div
+                        a(href="#" class="product-name") Only Check Trouser
+                    div.product-price $ 25.50
+                div 
+                    button.product-like <i class="far fa-heart"></i>
+        div.product-item
+            div 
+                img(src="/images/product-04.jpg", alt="/images/product-04")
+            div.product-item-information
+                div     
+                    div
+                        a(href="#" class="product-name" class="product-image") Classic Trench Coat
+                    div.product-price $ 75.00
+                div 
+                    button.product-like <i class="far fa-heart"></i>
+    div#added-modal.modal.fade(role='dialog')
+        div.modal-dialog
+            div.modal-content
+                div.modal-body.added-content 
+                    div <i class="fas fa-dragon"></i>
+                    div 
+                        h4 Added to cart !
+                div.modal-footer
+                    button.btn.btn-default(type='button' data-dismiss='modal') Close

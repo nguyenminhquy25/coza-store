@@ -1,0 +1,182 @@
+.carousel-content {
+    position: relative;
+}
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+.left-right-show {
+    font-size: 40px;
+    animation: left-right-show 1s;
+    position: relative;
+}
+.right-left-show {
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 0px 30px;
+    animation: right-left-show 1s;
+    position: relative;
+}
+.zoom-show {
+    background-color: #717fe0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    animation: zoom-show 1s;
+    position: relative;
+}
+@keyframes left-right-show {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 0px;
+    }
+}
+@keyframes right-left-show {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 0px;
+    }
+}
+@keyframes zoom-show {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.carousel-text > div:nth-child(3) button:hover {
+    background-color: black;
+}
+.quick-view {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 0px 50px;
+}
+.quick-view-item {
+    border: 1px solid darkgray;
+    margin: 20px 0px;
+    position: relative;
+}
+.quick-view-item:nth-child(1),.quick-view-item:nth-child(2) {
+    width: 48%;
+}
+.quick-view-item:nth-child(3),.quick-view-item:nth-child(4),.quick-view-item:nth-child(5) {
+    width: 31%;
+}
+.quick-view img {
+    width: 100%;
+}
+.top-left-div {
+    position: absolute;
+    left: 5%;
+    transition: all 0.5s;
+}
+.bottom-left-div {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    transition: all 0.5s;
+    transform: scale(0);
+}
+.bottom-left-div a {
+    color: white;
+    text-decoration: none !important;
+}
+.bottom-left-div a:hover {
+    color: white;
+}
+.top-left-div h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+.quick-view-item:hover .quick-view-back {
+    z-index: 0;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.quick-view-item:hover .top-left-div {
+    z-index: 1;
+    color: white;
+    cursor: pointer;
+}
+.quick-view-item:hover .bottom-left-div {
+    transform: scale(1);
+    border-bottom: 1px solid white;
+}
+.quick-view-back {
+    background-color: #717fe0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.overview-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel-text > div:first-child {
+        font-size: 30px;
+    }
+    .carousel-text > div:nth-child(2) {
+        font-size: 50px;
+    }
+    .quick-view {
+        width: 95%;
+    }
+    .overview-text {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .carousel-text > div:first-child {
+        font-size: 20px;
+    }
+    .carousel-text > div:nth-child(2) {
+        font-size: 40px;
+    }
+    .quick-view {
+        justify-content: center;
+    }
+    .quick-view-item {
+        width: 47% !important;
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .carousel-text > div:nth-child(2) {
+        padding: 5px 0px 10px;
+    }
+    .quick-view-item {
+        width: 100% !important;
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .carousel-text > div:first-child {
+        font-size: 15px;
+    }
+    .carousel-text > div:nth-child(2) {
+        font-size: 25px;
+    }
+}

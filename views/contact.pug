@@ -1,0 +1,33 @@
+extends ./partials/common.pug
+block content
+    div.top-introduce 
+        img(src="/images/bg-01.jpg", alt="bg-01")
+        div.top-introduce-text Contact
+    div.contact 
+        div.contact-left
+            h3 Send Us A Message
+            div.envelope-input
+                div <i class="far fa-envelope"></i>
+                div 
+                    input(type="text" placeholder="Your Email Address")
+            div 
+                <textarea class="response-text" rows="8" placeholder="How Can We Help?"></textarea>
+            div 
+                button.submit-message SUBMIT
+        div.contact-right 
+            div.contact-right-row 
+                div <i class="fas fa-map-marker-alt"></i>
+                div 
+                    h4 Address
+                    p.contact-address Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+            div.contact-right-row  
+                div <i class="fas fa-phone-alt"></i>
+                div
+                    h4 Lets Talk
+                    p.contact-number +1 800 1236879
+            div.contact-right-row  
+                div <i class="far fa-envelope"></i>
+                div 
+                    h4 Sale Support
+                    p.contact-email contact@email.com 
+

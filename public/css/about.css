@@ -1,0 +1,123 @@
+.top-introduce {
+    position: relative;
+}
+.top-introduce-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.top-introduce img {
+    width: 100%;
+}
+.about {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0px;
+}
+.about-top {
+    display: flex;
+    padding-bottom: 100px;
+    justify-content: space-between;
+}
+.about-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.about-title {
+    font-family: 'Poppins', sans-serif;
+}
+.about-information {
+    color: darkgray;
+    line-height: 1.8;
+}
+.about-top-left {
+    width: 60%;
+    padding-right: 50px;
+}
+.about-top-right {
+    width: 400px;
+    position: relative;
+    border: 2px solid darkgray;
+    height: 400px;
+}
+.about-bottom-left {
+    width: 400px;
+    position: relative;
+    border: 2px solid darkgray;
+    height: 400px;
+}
+.about-bottom-right {
+    width: 60%;
+    padding-left: 50px;
+}
+.about-top-right > div {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}
+.about-bottom-left > div {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+}
+.about img {
+    width: 100%;
+}
+.job-quote {
+    color: darkgray;
+    line-height: 1.8;
+    margin: 20px 0px;
+    padding-left: 20px;
+    border-left: 2px solid darkgray;
+    font-style: italic;
+}
+.job-name {
+    color: hsl(30, 1%, 43%);
+    padding: 10px 0px;
+}
+@media screen and (max-width: 1200px) {
+    .about {
+        width: 95%;
+    }
+    .about-top-right {
+        height: 100%;
+    }
+    .about-bottom-left {
+        height: 100%;
+    }
+    .about-bottom-right {
+        padding-left: 20px;
+    }
+    .about-top-left {
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about-top {
+        flex-wrap: wrap;
+    }
+    .about-bottom {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .about-top-left {
+        width: 95%;
+        margin: auto;
+    }
+    .about-bottom-left {
+        width: 95%;
+        margin: 40px auto 30px;
+    }
+    .about-top-right {
+        width: 95%;
+        margin: 40px auto 0px;
+    }
+    .about-bottom-right {
+        width: 95%;
+        margin: auto;
+    }
+}

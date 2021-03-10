@@ -1,0 +1,80 @@
+extends ./partials/common.pug
+block content
+    div#carousel-container.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+            li.active(data-target='#carousel-container' data-slide-to='0')
+            li(data-target='#carousel-container' data-slide-to='1')
+            li(data-target='#carousel-container' data-slide-to='2')
+        div.carousel-inner.carousel-content
+            div.item.active
+                img(src='/images/slide-01.jpg' alt='slide-01')
+            div.item
+                img(src='/images/slide-02.jpg' alt='slide-02')
+            div.item
+                img(src='/images/slide-03.jpg' alt='slide-03')
+            div.carousel-text 
+                div.left-right-show Women Collection 2018
+                div.right-left-show NEW SEASON
+                div
+                    button.zoom-show SHOP NOW
+        a.left.carousel-control.restart-animation(href='#carousel-container' data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+            span.sr-only Previous
+        a.right.carousel-control.restart-animation(href='#carousel-container' data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+            span.sr-only Next
+     
+    div.quick-view-container
+        div.quick-view
+            div.quick-view-item
+                div.quick-view-front
+                    div.top-left-div
+                        h2 Women
+                        h4 New Trend
+                    div 
+                        img(src="/images/banner-04.jpg", alt="banner-04")
+                div.quick-view-back
+                    div.bottom-left-div
+                        a(href="/shop/women")  SHOP NOW
+            div.quick-view-item 
+                div.quick-view-front
+                    div.top-left-div
+                        h2 Men 
+                        h4 New Trend
+                    div 
+                        img(src="/images/banner-05.jpg", alt="banner-05")
+                div.quick-view-back
+                    div.bottom-left-div
+                        a(href="/shop/men")  SHOP NOW
+            div.quick-view-item
+                div.quick-view-front
+                    div.top-left-div
+                        h2 Watches
+                        h4 Spring 2018
+                    div 
+                        img(src="/images/banner-07.jpg", alt="banner-07")
+                div.quick-view-back
+                    div.bottom-left-div
+                        a(href="/shop/watches")  SHOP NOW
+            div.quick-view-item
+                div.quick-view-front
+                    div.top-left-div
+                        h2 Bags
+                        h4 Spring 2018
+                    div 
+                        img(src="/images/banner-08.jpg", alt="banner-08")
+                div.quick-view-back
+                    div.bottom-left-div
+                        a(href="/shop/bag")  SHOP NOW
+            div.quick-view-item
+                div.quick-view-front
+                    div.top-left-div
+                        h2 Accessories
+                        h4 Spring 2018
+                    div 
+                        img(src="/images/banner-09.jpg", alt="banner-09")
+                div.quick-view-back
+                    div.bottom-left-div
+                        a(href="/shop/shoes")  SHOP NOW
+    div.overview-text PRODUCT OVERVIEW
+    include ./partials/product.pug

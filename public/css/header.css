@@ -1,0 +1,141 @@
+.top-navbar {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-size: 13px;
+    background-color: black;
+    color: darkgray;
+    justify-content: space-between;
+}
+.top-navbar a {
+    color: darkgray;
+    transition: all 0.5s;
+    text-decoration: none !important;
+}
+.top-navbar a:hover {
+    color: #717fe0;
+}
+.top-navbar-left {
+    padding: 10px;
+    width: 40%;
+    text-align: center;
+}
+.top-navbar-right {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.top-item-right {
+    padding: 10px;
+    border-left: 1px solid darkgray;
+}
+.top-item-right:last-child {
+    border-right: 1px solid darkgray;
+}
+.main-navbar-container {
+    background-color: #d6dbde;
+}
+.main-navbar-container a {
+    color: black;
+    transition: all 0.5s;
+    text-decoration: none !important;
+}
+.main-navbar-container a:hover {
+    color: #717fe0;
+}
+.main-navbar {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.logo {
+    padding: 25px;
+}
+.main-link-active {
+    color: #717fe0 !important;
+}
+.main-flex-navbar {
+    display: flex;
+}
+.main-navbar-left {
+    display: flex;
+    width: 70%;
+}
+.main-flex-item {
+    padding: 25px 20px;
+}
+.main-flex-item button {
+    border: none;
+    background-color: #d6dbde;
+    display: none;
+}
+.main-navbar-right {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+.main-navbar-right i {
+    font-size: 17px;
+}
+.top-right-container {
+    position: relative;
+}
+.top-right-div {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: #f74877;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+.number-liked-container {
+    position: relative;
+}
+.number-liked {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: #717fe0;
+    padding: 0px 3px;
+}
+#collapse-content {
+    background-color: #717fe0;
+}
+#collapse-content a {
+    color: white;
+    text-decoration: none !important;
+}
+#collapse-content .main-flex-item:hover {
+    background-color: black;
+    cursor: pointer;
+}
+.header-active-link {
+    color: #717fe0 !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-navbar {
+        width: 100%;
+    }
+    .main-navbar-left {
+        width: 80%;
+    }
+    .main-navbar-right {
+        justify-content: flex-end;
+        width: 20%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .top-navbar {
+        display: none;
+    }
+    .main-flex-navbar {
+        display: none;
+    }
+    .main-flex-item button {
+        display: block;
+    }
+}

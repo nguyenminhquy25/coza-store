@@ -1,0 +1,37 @@
+div.product-navbar
+    div.product-navbar-left
+        div.product-left-item 
+            a(href="/shop" class=(page_category == "All Products" ? "product-link-active" : undefined)) All Products 
+        div.product-left-item
+            a(href="/shop/women" class=(page_category == "Women" ? "product-link-active" : undefined)) Women 
+        div.product-left-item 
+            a(href="/shop/men" class=(page_category == "Men" ? "product-link-active" : undefined)) Men 
+        div.product-left-item 
+            a(href="/shop/bag" class=(page_category == "Bag" ? "product-link-active" : undefined)) Bag 
+        div.product-left-item 
+            a(href="/shop/shoes" class=(page_category == "Shoes" ? "product-link-active" : undefined)) Shoes 
+        div.product-left-item 
+            a(href="/shop/watches" class=(page_category == "Watches" ? "product-link-active" : undefined)) Watches 
+    div.product-navbar-right 
+        div.product-right-item
+            button <i class="fas fa-sort-amount-down"></i> Filter
+        div.product-right-item
+            button <i class="fas fa-search"></i> Search
+div.product
+    each product in products
+        div.product-item
+            div 
+                img(src= product.product_image, alt= product.product_alt, class="product-image")
+            div.product-item-information
+                div     
+                    div
+                        a(href="/shop/product-detail?product=" + product.product_alt class="product-name") #{product.product_name}
+                    div.product-price $&nbsp;#{product.product_price}
+                div 
+                    button.product-like <i class="far fa-heart"></i>
+div.pagination-div 
+    div.previous-page 
+        a(href="?page=" + ((page - 1) <= 1 ? 1 : (page - 1)), class="previous-page") <i class="fas fa-backward"></i>
+    div.page= page
+    div.next-page
+        a(href="?page=" + (page + 1), class="next-page") <i class="fas fa-forward"></i>

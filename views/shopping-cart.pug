@@ -1,0 +1,57 @@
+extends ./partials/common.pug
+block content
+    ol.breadcrumb.shopping-cart-breadcrumb
+        li.breadcrumb-item
+                a(href='/') Home
+        li.breadcrumb-item.active(aria-current='page') Shopping Cart
+    div.shopping-cart
+        div.shopping-cart-left 
+            div 
+                table.cart-table 
+                    colgroup    
+                        col                                   
+                        col
+                        col
+                        col 
+                    tbody.cart-body
+                        tr 
+                            th PRODUCT
+                            th PRICE
+                            th QUANTITY
+                            th TOTAL
+            div.coupon
+                div 
+                    input(type="text" placeholder="Coupon Code")
+                    button APPLY COUPON
+                div 
+                    button.update-cart UPDATE CART
+        div.shopping-cart-right
+            div
+                h4 CART TOTALS
+                div.cart-sub-total
+                    div Subtotal: 
+                    div.sub-total
+                div.cart-shipping 
+                    div(style="width:30%;font-weight: bold;") Shipping: 
+                    div 
+                        div There are no shipping methods available. Please double check your address, or contact us if you need any help.
+                        div CALCULATE SHIPPING
+                        div 
+                            select 
+                                option Select a country
+                                option US
+                        div 
+                            input(type="text" placeholder="State / country")
+                        div 
+                            input(type="text" placeholder="Postcode / Zip")
+                        div 
+                            button  UPDATE TOTALS 
+                div.cart-total 
+                    div
+                        div Total: 
+                        div.total
+                    div 
+                        button PROCEED TO CHECKOUT
+
+
+

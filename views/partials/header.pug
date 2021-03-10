@@ -1,0 +1,54 @@
+div.top-navbar 
+    div.top-navbar-left Free shipping for standard order over $100
+    div.top-navbar-right
+        div.top-item-right
+            a(href="#") Help & FAQs 
+        div.top-item-right
+            a(href="#") My Account 
+        div.top-item-right
+            a(href="#") EN 
+        div.top-item-right
+            a(href="#") USD   
+div.main-navbar-container
+    div.main-navbar
+        div.main-navbar-left
+            div.logo
+                a(href="/") 
+                    img(src="/images/logo-01.webp", alt="logo")
+            div.main-flex-navbar
+                div.main-flex-item
+                    a(href="/" class=(page_name == "Home" ? "header-active-link" : undefined)) Home 
+                div.main-flex-item  
+                    a(href="/shop" class=(page_name == "Shop" ? "header-active-link" : undefined)) Shop 
+                div.top-right-container.main-flex-item
+                    a(href="/shopping-cart" class=(page_name == "Shopping cart" ? "header-active-link" : undefined)) Shopping cart 
+                div.main-flex-item
+                    a(href="/blog" class=(page_name == "Blog" ? "header-active-link" : undefined)) Blog
+                div.main-flex-item
+                    a(href="/about" class=(page_name == "About" ? "header-active-link" : undefined)) About 
+                div.main-flex-item
+                    a(href="/contact" class=(page_name == "Contact" ? "header-active-link" : undefined)) Contact            
+        div.main-navbar-right
+            div.main-flex-item 
+                a(href="/search") <i class="fas fa-search"></i>
+            div.number-liked-container.main-flex-item
+                a(href="/shopping-cart") <i class="fas fa-shopping-cart"></i>
+                div.number-liked 2
+            div.number-liked-container.main-flex-item
+                a(href="/shopping-cart") <i class="far fa-heart"></i>
+                div.number-liked 2
+            div.main-flex-item 
+                button(data-toggle="collapse" data-target="#collapse-content") <i class="fas fa-bars"></i>
+div#collapse-content.collapse
+    div.main-flex-item
+        a(href="/" class=(page_name == "Home" ? "header-active-link" : undefined)) Home 
+    div.main-flex-item  
+        a(href="/shop" class=(page_name == "Shop" ? "header-active-link" : undefined)) Shop 
+    div.top-right-container.main-flex-item
+        a(href="/shopping-cart" class=(page_name == "Shopping cart" ? "header-active-link" : undefined)) Shopping cart 
+    div.main-flex-item
+        a(href="/blog" class=(page_name == "Blog" ? "header-active-link" : undefined)) Blog
+    div.main-flex-item
+        a(href="/about" class=(page_name == "About" ? "header-active-link" : undefined)) About 
+    div.main-flex-item
+        a(href="/contact" class=(page_name == "Contact" ? "header-active-link" : undefined)) Contact 

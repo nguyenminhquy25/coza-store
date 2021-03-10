@@ -1,0 +1,120 @@
+.contact {
+    display: flex;
+    width: 80%;
+    margin: 100px auto;
+    flex-wrap: wrap;
+}
+.contact h3 {
+    padding: 20px;
+}
+.contact-left {
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+    border: 1px solid darkgray;
+    border-right: transparent;
+}
+.contact-left input {
+    width: 100%;
+    border: none;
+    padding: 15px;
+}
+.contact-left input:focus {
+    outline: none;
+}
+.contact-left textarea {
+    width: 100%;
+    border: 1px solid darkgray;
+}
+.contact-left textarea:focus {
+    outline: none;
+}
+.contact-left button {
+    width: 100%;
+    transition: all 0.5s;
+}
+.contact-left button:hover {
+    background-color: #717fe0;
+}
+.contact-right {
+    width: 50%;
+    padding: 70px;
+    border: 1px solid darkgray;
+}
+.contact-right-row {
+    display: flex;
+    align-items: baseline;
+}
+.contact-right-row > div {
+    padding: 20px;
+}
+.contact-right-row i {
+    font-size: 20px;
+}
+.envelope-input {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: baseline;
+}
+.envelope-input > div:first-child {
+    width: 50px;
+    padding: 15px 0px 15px 20px;
+    border: 1px solid darkgray;
+    border-right: transparent;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.envelope-input > div:nth-child(2) {
+    width: 100%;
+    border: 1px solid darkgray;
+    border-left: transparent;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.response-text {
+    padding: 20px;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+.submit-message {
+    padding: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+}
+.contact-address {
+    color: darkgray;
+}
+.contact-number {
+    color: #717fe0;
+}
+.contact-email {
+    color: #717fe0;
+}
+
+@media screen and (max-width: 1200px) {
+    .contact {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .contact-right {
+        padding: 70px 20px;
+    }
+    .contact-left {
+        padding: 50px 20px;
+        border: 1px solid darkgray;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-left {
+        width: 95%;
+        margin: auto;
+    }
+    .contact-right {
+        width: 95%;
+        margin: auto;
+    }
+}
