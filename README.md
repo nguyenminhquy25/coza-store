@@ -1,3 +1,1 @@
-# coza-store
-
 # nodejs
